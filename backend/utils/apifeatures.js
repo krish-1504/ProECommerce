@@ -30,5 +30,10 @@ class ApiFeatures {
         this.query = this.query.find(queryCopy);
         return this;
     }
+    pagination(resultPerPage){
+        const currPage = Number(this.query.page) ||1
+        const skip = resultPerPage * (currPage - 1);
+        this.query = this.query.limit(resultPerPage).skip(skip);
+    }
 }
 module.exports = ApiFeatures;
