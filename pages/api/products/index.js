@@ -1,4 +1,3 @@
-/
 import { createRouter } from 'next-connect';
 import dbConnect from '@/backend/config/dbConnect';
 import { newProduct } from '@/backend/controllers/productControllers';
