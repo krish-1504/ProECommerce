@@ -1,5 +1,5 @@
 import Product from "../models/product";
-
+import APIFilters from "../utils/APIFilters";
 export const newProduct = async (req,res,next)=>{
     const product = await Product.create(req.body);
     res.status(201).json({
@@ -8,7 +8,12 @@ export const newProduct = async (req,res,next)=>{
 }
 
 export const getProducts = async (req,res,next)=>{
-    const product = await Product.find();
+
+
+    const apiFilters = new APIFilters(Product.find(),req.query).search().filter()
+    const product = await apiFilters.query;
+
+
     res.status(200).json({
         product,
     });
