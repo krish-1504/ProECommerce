@@ -1,17 +1,17 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import Search from "./Search";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header className="bg-white py-2 border-b">
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="flex flex-wrap items-center">
-          <div className="flex-shrink-0 mr-50 mb-3">
+          <div className="flex-shrink-0 mr-5">
             <a href="/">
-              <img
-                src="/images/ProECommerce.png"
-                style={{ height: "60px", width: "180px" }}
+              <Image
+                src="/images/logo.png"
                 height="40"
                 width="120"
                 alt="BuyItNow"
@@ -39,7 +39,10 @@ const Header = () => {
             </Link>
             <Link href="/me">
               <div className="flex items-center mb-4 space-x-3 mt-4 cursor-pointer">
-                <img className="w-10 h-10 rounded-full" src={"/images/default.png"} />
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={"/images/default.png"}
+                />
                 <div className="space-y-1 font-medium">
                   <p>
                     Ghulam

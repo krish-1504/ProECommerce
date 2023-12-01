@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import CustomPagination from "../layout/CustomPagination";
-import Filters from "../layout/Filters";
+import CustomPagination from "../layouts/CustomPagination";
+import Filters from "../layouts/Filters";
 
 import ProductItem from "./ProductItem";
 

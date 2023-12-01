@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import StarRatings from "react-star-ratings";
-import BreadCrumbs from "../layout/BreadCrumbs";
+import BreadCrumbs from "../layouts/BreadCrumbs";
 
 const ProductDetails = ({ product }) => {
   const imgRef = useRef(null);
